@@ -1,0 +1,24 @@
+service: serverle-bundle-repo
+
+plugins:
+  - serverless-bundle
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-1
+  stage: dev
+  timeout: 15
+
+functions:
+  poll-fields:
+    handler: src/handler.repro
+    events:
+      - http:
+          path: test-repro
+          method: get
+
+custom:
+  serverless-offline:
+    port: 4000

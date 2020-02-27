@@ -1,0 +1,16 @@
+{
+  "name": "serverless-bundle-ts-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "^1.64.1",
+    "serverless-bundle": "1.4.0-beta.2",
+    "serverless-offline": "^5.12.1",
+    "typescript": "^3.8.2"
+  },
+  "scripts": {
+    "start": "serverless offline",
+    "build": "serverless package"
+  }
+}
